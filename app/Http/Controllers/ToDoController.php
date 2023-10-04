@@ -72,6 +72,13 @@ class ToDoController extends Controller
     {
         /* dd($request->all()); */
 
+        $this->validate(request(),[
+
+            'title'=>'required',
+
+
+                ]);
+
         $todo = new ToDo;
 
         $todo->title=$request->title;
@@ -111,6 +118,13 @@ class ToDoController extends Controller
      */
     public function update(Request $request, ToDo $toDo)
     {
+
+        $this->validate(request(),[
+
+            'title'=>'required',
+
+
+                ]);
              $toDo::where('id',$request->id)->update(['title'=>$request->title]);
              return ['message' => 'successfully updated'];
     }

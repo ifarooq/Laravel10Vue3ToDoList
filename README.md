@@ -1,11 +1,12 @@
-Composer install
+1. create .env file with all configuratioins
+
+2. Composer install
 
 
-npm install
+3. npm install
 
+4. php artisan migrate
 
-php artisan serve
+5. php artisan serve
 
-
-
-npm run dev
+6. npm run dev

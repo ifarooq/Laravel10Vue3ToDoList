@@ -37,7 +37,7 @@
         {{todo.title}}
       <div>  <button class="btn btn-primary btn-sm me-2" v-on:click="onEdit(todo.id)">Edit</button>
         <button class="btn btn-danger btn-sm me-2" v-on:click="deleteTodo(todo.id)">Delete</button>
-        <button :class="{ 'btn-success': todo.status, 'btn-warning':!todo.status}" class="btn btn-success btn-sm" v-on:click="updateStatus(todo.id)"> <span v-if="todo.status"> Mark Complete </span>  <span v-else> Mark In Complete </span> </button>
+        <button :class="{ 'btn-success': todo.status, 'btn-warning':!todo.status}" class="btn btn-success btn-sm" v-on:click="updateStatus(todo.id)"> <span v-if="todo.status"> Mark Complete </span>  <span v-else> Mark Incomplete </span> </button>
       </div>
     </li>
 

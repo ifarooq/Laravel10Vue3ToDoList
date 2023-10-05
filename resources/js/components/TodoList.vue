@@ -1,7 +1,7 @@
 <template>
    <div class="container mt-5">
   <h2>Add Item in To Do List</h2>
-  <form id="contactForm">
+  <form id="contactForm" @submit.prevent="onSubmit">
 
 
     <div class="input-group mb-3">
@@ -72,6 +72,7 @@
 
 </style>
 <script>
+import { ref } from 'vue';
    export default {
   /*   props: ['title','description'], */
    /* ready: function() {
@@ -98,6 +99,9 @@
     mounted:function() {
 
      this.fetchTodos();
+
+     this.$refs.itemref.focus();
+
 
   },
     methods: {

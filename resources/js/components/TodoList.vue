@@ -5,8 +5,8 @@
 
 
     <div class="input-group mb-3">
-  <input ref="itemref" required v-model="form.title" type="text" class="form-control" placeholder="Enter Item" aria-label="Enter Item" aria-describedby="button-addon2" @keyup.enter="onSubmit" tabindex="0">
-  <button class="btn  btn-primary" type="button" id="button-addon2" v-on:click="onSubmit"> <span v-if="form.id">   Update </span> <span v-else>   +Add </span>   </button>
+  <input ref="itemref" required v-model="form.title" type="text" class="form-control" placeholder="Enter Item" aria-label="Enter Item" aria-describedby="button-addon2" @keyup.enter="submit" tabindex="0">
+  <button type="submit" class="btn  btn-primary"  id="button-addon2" > <span v-if="form.id">   Update </span> <span v-else>   +Add </span>   </button>
 </div>
 
 
